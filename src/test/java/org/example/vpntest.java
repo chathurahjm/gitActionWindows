@@ -121,6 +121,7 @@ public class vpntest {
                 Thread.sleep(900000); // Sleep for 1 second
                 Thread.sleep(900000); // Sleep for 1 second
                 Thread.sleep(900000); // Sleep for 1 second
+                Thread.sleep(900000); // Sleep for 1 second
 
                 WebElement pause = driver.findElement(By.xpath("(//*[contains(@class,'yt-spec-button-shape-next--call-to-action')])[3]"));
                 if (pause.isDisplayed())
