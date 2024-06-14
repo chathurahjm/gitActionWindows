@@ -46,7 +46,7 @@ public class vpntest {
                 //ChromeOptions chromeOptions = new ChromeOptions();
             } else {
 
-                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver-linux64");
 
 
             }
@@ -119,6 +119,10 @@ public class vpntest {
                 Thread.sleep(900000); // Sleep for 1 second
                 //Thread.sleep(3000); // Sleep for 1 second
                 Thread.sleep(900000); // Sleep for 1 second
+                Thread.sleep(900000); // Sleep for 1 second
+                Thread.sleep(900000); // Sleep for 1 second
+                Thread.sleep(900000); // Sleep for 1 second
+                 Thread.sleep(900000); // Sleep for 1 second
                 Thread.sleep(900000); // Sleep for 1 second
                 Thread.sleep(900000); // Sleep for 1 second
                 Thread.sleep(900000); // Sleep for 1 second
