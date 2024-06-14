@@ -52,25 +52,25 @@ jobs:
       run: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
       
         
-    - name: Download ChromeDriver
-      run: | 
-          # Download Chrome version 114.0.5735.90
-          wget -q "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.90-1_amd64.deb" -O chrome.deb
-          # Install Chrome
-          sudo dpkg -i chrome.deb
-          # Install dependencies
-          sudo apt-get install -f
-          # Clean up
-          rm chrome.deb
-          LATEST_CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
-          wget "https://chromedriver.storage.googleapis.com/${LATEST_CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -P ~/
-          unzip ~/chromedriver_linux64.zip -d ~/ && rm ~/chromedriver_linux64.zip
-          sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
-          sudo chmod +x /usr/local/bin/chromedriver
-          # CHROMEDRIVER_VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-          # wget -q -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
-          # sudo unzip -o /tmp/chromedriver.zip -d /usr/local/bin/
-          # sudo chmod +x /usr/local/bin/chromedriver
+    # - name: Download ChromeDriver
+    #   run: | 
+    #       # Download Chrome version 114.0.5735.90
+    #       wget -q "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.90-1_amd64.deb" -O chrome.deb
+    #       # Install Chrome
+    #       sudo dpkg -i chrome.deb
+    #       # Install dependencies
+    #       sudo apt-get install -f
+    #       # Clean up
+    #       rm chrome.deb
+    #       LATEST_CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
+    #       wget "https://chromedriver.storage.googleapis.com/${LATEST_CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -P ~/
+    #       unzip ~/chromedriver_linux64.zip -d ~/ && rm ~/chromedriver_linux64.zip
+    #       sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+    #       sudo chmod +x /usr/local/bin/chromedriver
+    #       # CHROMEDRIVER_VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+    #       # wget -q -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
+    #       # sudo unzip -o /tmp/chromedriver.zip -d /usr/local/bin/
+    #       # sudo chmod +x /usr/local/bin/chromedriver
 
 
     - name: Check Chrome Version
