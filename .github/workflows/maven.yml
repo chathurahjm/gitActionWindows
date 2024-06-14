@@ -91,7 +91,7 @@ jobs:
       if: always()
       run: |
        sudo mkdir /home/linux
-       sudo cp -r /home/runner/work/gitActionWindows/gitActionWindows/screenshots/* /home/linux/
+       sudo cp -r /home/runner/work/gitActionubuntu-latest/gitActionubuntu-latest/screenshots/* /home/linux/
        sudo chown -R runner:runner /home/linux/
        pwd
 
